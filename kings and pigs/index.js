@@ -16,7 +16,7 @@ const backgroundLevel1 = new Sprite({
 })
 
 const player = new Player({
-    collisionBlocks
+    collisionBlocks,
 })
 
 const keys = {
@@ -34,8 +34,8 @@ function animate() {
     window.requestAnimationFrame(animate)
     
     backgroundLevel1.draw()
-    collisionBlocks.forEach(CollisionBlock => {
-        CollisionBlock.draw()
+    collisionBlocks.forEach((collisionBlock) => {
+        collisionBlock.draw()
     })
 
     player.velocity.x = 0
